@@ -1,0 +1,119 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn Mongolian Tradtional Script." />
+    <meta name="author" content="Bayarbat" />
+    <meta name="keywords" content="Mongolian, learn Mongolian, traditional script" />
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Nomad Script</title>
+</head>
+
+
+<body>
+    <header>
+        <!-- Section that contains links to other pages -->
+        <section class="nav-bar box-shadow">
+            <!-- Defualt logo when first loading into the page -->
+            <div class="company-logo-default">
+                <img src="/static/icon.svg" alt="Icon">
+                <h1>Nomad Script</h1>
+            </div>
+            <!-- Smaller left aligned logo when scrolling -->
+            <div class="company-logo-scroll">
+                <img src="/static/icon.svg" alt="Icon">
+            </div>
+            <!-- Main Navigation Links -->
+            <nav class="nav-links">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/learn">Learn Mongolian</a></li>
+                    <li><a href="/contribute">Contribute</a></li>
+                    <li><a href="/about">About Us</a></li>
+                </ul>
+            </nav>
+            <!-- Scroll to top button -->
+            <nav class="scroll-up-button">
+                <button>
+                    <i class="fa-solid fa-arrow-up fa-2x"></i>
+                </button>
+            </nav> 
+
+            <div class="burger-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            
+            <nav class="mobile-nav">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/learn">Learn Mongolian</a></li>
+                    <li><a href="/contribute">Contribute</a></li>
+                    <li><a href="/about">About Us</a></li>
+                </ul>
+            </nav>
+
+        </section>
+    </header>
+
+    <main class="main-content">
+        {% block content %} 
+        {% endblock %} 
+    </main>
+
+    <footer>
+        <section class="footer">
+            <div class="footer-section">
+                <h4>MENU</h4>
+                <nav class="footer-links">
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Terms and Condition</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer-section">
+                <h4>LANGUAGES</h4>
+                <nav class="footer-links">
+                    <ul>
+                        <li><a href="#">English</a></li>
+                        <li><a href="#">Français</a></li>
+                        <li><a href="#">Español</a></li>
+                        <li><a href="#">Монгол</a></li>
+                        <li><a href="#">中文</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer-section">
+                <h4>RESOURCES</h4>
+                <nav class="footer-links">
+                    <ul>
+                        <li><a href="#">Mongolian History</a></li>
+                        <li><a href="#">Grammar Lessons</a></li>
+                        <li><a href="#">Learning Centers</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer-section">
+                <h4>CONTACT US</h4>
+                <nav class="social-media-links">
+                    <ul>
+                        <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+    </footer>
+    <script src="{% static 'script/main.js' %}"></script>    
+</body>

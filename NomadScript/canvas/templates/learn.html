@@ -1,0 +1,132 @@
+{% extends "base.html" %}  {% load static %}
+{% block content %} 
+  
+<section class="learning-intro">
+    <div class="left-info">
+        <h2>Learn Traditional Mongolian</h2>
+        <div>
+            <h3>Cyrillic alphabet</h3>
+            <p> 
+                Cyrllic was introduced in the 1940s in the Mongolian People's Republic under Soviet influence.
+                The Cyrillic script had many advantages over the traditional Mongolian including having clear certain 
+                letters such as "t" and "d," "o" and "u" which were frequently confused in traditional script, and simple & easy
+                shapes thats consistent regardless of position unlike the Mongolian script.
+            </p>
+        </div>
+        <div>
+            <h3>Why Learn the Traditional Mongolian Script?</h3>
+            <p> 
+                Although Cyrillic has been the dominant script since the 1940s, the traditional Mongolian script remains a vital 
+                part of Mongolia’s cultural identity. Its elegant vertical form connects modern Mongolians to 
+                their rich history, classical literature, and centuries-old traditions. With Mongolia's 2025 bilingual 
+                policy requiring both scripts in official documents, learning the traditional script is not just about
+                preserving heritage—it's about preparing for the future.
+            </p>
+        </div>
+        
+    </div>
+    <div class="right-image">
+        <div class="modern">
+            <img src="/media/web/modern.png" alt="'Mongolian Soyombo modern" >
+        </div>
+        <div class="traditional">
+            <img src="/media/web/traditional.jpg" alt="'Mongolian Soyombo traditional" >
+        </div>
+    </div>
+</section>
+
+<div class="decorative-line">
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+
+
+<section class="alphabet">
+    <section class="dropdown active">
+        <div class="lesson-header">
+            <h2>Mongolian Script alphabet</h2>
+            <i class="fa-solid fa-square-caret-down"></i>
+        </div>
+        <div class="lesson-para">
+            <p>
+                The Mongolian script is an alphabetic writing system traditionally written left to right in 
+                vertical columns, running from top to bottom. Unlike many other alphabets, each letter changes 
+                shape depending on its position within a word and the letters that follow it. Historically, it 
+                has been taught as syllables rather than individual letters, emphasizing its flowing and connected nature.
+                Mongolian script consists of consonants and vowels that combine to make a syllable. 
+                Plain consonants are: n, b, p, h, g, m, l, s, sh, t/d, ch/ts, j and r (or in Cyrillic н, б, п, х, г, м, л, с, ш, т, д, ч/ц, ж/з and р). 
+                Vowels are: a, e, i, o/ö and  u/ü (or in Cyrillic  а, э, и, о, у, ө, ү)
+            </p>
+        </div>
+      </section>
+      <section class="dropdown">
+          <div class="lesson-header">
+              <h2>Pronunciation of each letter</h2>
+              <i class="fa-solid fa-square-caret-down"></i>
+          </div>
+          <div class="lesson-para">
+            <div class="alphabet-grid">
+                <button class="letter-btn" onclick="playAudio('a')">A</button>
+                <button class="letter-btn" onclick="playAudio('b')">B</button>
+                <button class="letter-btn" onclick="playAudio('ch')">CH</button>
+                <button class="letter-btn" onclick="playAudio('e')">E</button>
+                <button class="letter-btn" onclick="playAudio('g')">G</button>
+                <button class="letter-btn" onclick="playAudio('h')">H</button>
+                <button class="letter-btn" onclick="playAudio('i')">I</button>
+                <button class="letter-btn" onclick="playAudio('j')">J</button>
+                <button class="letter-btn" onclick="playAudio('l')">L</button>
+                <button class="letter-btn" onclick="playAudio('m')">M</button>
+                <button class="letter-btn" onclick="playAudio('n')">N</button>
+                <button class="letter-btn" onclick="playAudio('o')">O</button>
+                <button class="letter-btn" onclick="playAudio('u')">U</button>
+                <button class="letter-btn" onclick="playAudio('p')">P</button>
+                <button class="letter-btn" onclick="playAudio('r')">R</button>
+                <button class="letter-btn" onclick="playAudio('s')">S</button>
+                <button class="letter-btn" onclick="playAudio('sh')">SH</button>
+                <button class="letter-btn" onclick="playAudio('t')">T</button>
+            </div>
+          </div>
+      </section>
+      <section class="dropdown">
+        <div class="lesson-header">
+            <h2>Daily lesson: letter A</h2>
+            <i class="fa-solid fa-square-caret-down"></i>
+        </div>
+        <div class="lesson-para">
+            <h2>Letter of the Day: ᠠ (A)</h2>
+            <p>Watch the video to see the correct stroke order and try writing it yourself.</p>
+
+            <div class="lesson-container">
+                <div class="letter-video">
+                    <video controls>
+                        <source src="/media/video/a-tut.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+
+                <div class="drawing-area">
+                    <canvas id="drawingCanvas"></canvas>
+                    <div class="canvas-buttons">
+                        <button id="clearCanvas">Clear</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+</section>
+
+<div class="decorative-line">
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+
+<section class="daily-lesson">
+    
+</section>
+
+
+<script src="{% static 'script/learn.js' %}"></script>
+
+{% endblock %}
