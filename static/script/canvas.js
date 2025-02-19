@@ -129,8 +129,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 //If middleaware sent back next reference draw it
                 if (data.next_reference) {
                     // Update reference image and label
-                    referenceImage.src = '/static/images/web/Letters/' + referenceLabel + '.png';
                     referenceLabel = data.next_reference.label;
+                    referenceImage.src = '/static/images/web/Letters/' + referenceLabel + '.png';
                     labelElement.textContent = 'Letter to Draw: ' + referenceLabel;
                 //If there is no reference picture, alert the user
                 } else {
