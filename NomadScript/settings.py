@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
-import environ
+import dj_database_url
 import os
 
 
@@ -84,10 +84,7 @@ WSGI_APPLICATION = "NomadScript.wsgi.application"
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": "mydatabase",
-    }
+    'default': dj_database_url.parse("postgresql://nomadscript_user:NWlJhdAPFEs7SwZ7UEnIpdPttqvVpZfb@dpg-cuqtft9u0jms73ea239g-a.frankfurt-postgres.render.com/nomadscript")
 }
 
 SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
@@ -135,7 +132,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [BASE_DIR / "static"]
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
