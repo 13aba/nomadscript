@@ -11,7 +11,7 @@ document.addEventListener("scroll", function() {
 });
 
 function playAudio(letter) {
-    let audio = new Audio(`/media/audio/${letter}.wav`);
+    let audio = new Audio(`/static/audio/${letter}.wav`);
     audio.play();
 }
 
