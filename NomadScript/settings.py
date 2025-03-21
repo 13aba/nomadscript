@@ -84,7 +84,7 @@ WSGI_APPLICATION = "NomadScript.wsgi.application"
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.parse("postgresql://nomadscript_user:NWlJhdAPFEs7SwZ7UEnIpdPttqvVpZfb@dpg-cuqtft9u0jms73ea239g-a.frankfurt-postgres.render.com/nomadscript")
+    'default': dj_database_url.parse("postgresql://nomadscript_4zkh_user:YkN0D8QqQQa2WfzYpLNaBruec5f2uLiN@dpg-cvemiffnoe9s73ept88g-a.frankfurt-postgres.render.com/nomadscript_4zkh")
 }
 
 SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
