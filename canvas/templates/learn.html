@@ -106,9 +106,12 @@
                 </div>
 
                 <div class="drawing-area">
+                    <img id="checkmark" src="{% static 'images/checkmark.png' %}" style="display: none;">
+                    <img id="x" src="{% static 'images/x.png' %}" style="display: none;">
                     <canvas id="drawingCanvas"></canvas>
                     <div class="canvas-buttons">
                         <button id="clearCanvas">Clear</button>
+                        <button id="predictImage">Check</button>
                     </div>
                 </div>
             </div>
